@@ -198,11 +198,11 @@ const App = () => {
           WELCOME!
         </div>
         <div className="bio">
-          イーサリアムウォレットを接続して、メッセージを作成したら、
+          Connect your Wallet. and Send 
           <span role="img" aria-label="hand-wave">
-            👋
+             👋 
           </span>
-          を送ってください
+          Please.
           <span role="img" aria-label="shine">
             ✨
           </span>
@@ -220,14 +220,17 @@ const App = () => {
         {/* waveボタンにwave関数を連動 */}
         {currentAccount && (
           <button className="waveButton" onClick={wave}>
-            Wave at Me
+            Wave at Me 
+            <span role="img" aria-label="hand-wave">
+             👋 
+            </span>
           </button>
         )}
         {/* メッセージボックスを実装*/}
         {currentAccount && (
           <textarea
             name="messageArea"
-            placeholder="メッセージはこちら"
+            placeholder="  Please write your Messages,here."
             type="text"
             id="message"
             value={messageValue}
@@ -249,9 +252,10 @@ const App = () => {
                     padding: "8px",
                   }}
                 >
-                  <div>Address: {wave.address}</div>
+                  <div>Address:{wave.address}</div>
                   <div>Time: {wave.timestamp.toString()}</div>
-                  <div>Message: {wave.message}</div>
+                  <div><p></p></div>
+                  <div>Message:<b>{wave.message}</b><p>--</p></div>
                 </div>
               );
             })}
